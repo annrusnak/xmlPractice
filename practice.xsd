@@ -1,0 +1,27 @@
+<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="class">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element type="xsd:string" name="name"/>
+                <xsd:element name="people">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="person" maxOccurs="unbounded" minOccurs="0">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element type="xsd:string" name="firstname"/>
+                                        <xsd:element type="xsd:string" name="lastname"/>
+                                        <xsd:element type="xsd:string" name="city"/>
+                                        <xsd:element type="xsd:byte" name="age"/>
+                                    </xsd:sequence>
+                                    <xsd:attribute type="xsd:byte" name="id"/>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>
